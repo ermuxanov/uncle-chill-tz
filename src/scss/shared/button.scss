@@ -1,0 +1,20 @@
+.button {
+  margin-top: 100px;
+  padding: 30px 45px 30px 50px;
+  position: relative;
+  background: var(--yellow);
+  border-radius: 5px;
+  width: max-content;
+  button {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    color: var(--black);
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+  }
+}

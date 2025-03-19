@@ -12,5 +12,11 @@
 @import "./components/footer";
 @import "./components/main-background";
 
+// Shared
+@import "./shared/text-bg";
+@import "./shared/button";
+
 // Home Page
 @import "./sections/intro";
+@import "./sections/about";
+@import "./sections/price";
