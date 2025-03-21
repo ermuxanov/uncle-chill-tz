@@ -1,0 +1,31 @@
+.marque {
+  position: absolute;
+  background: var(--white);
+  z-index: 10;
+  width: 100%;
+  bottom: 35px;
+  overflow: hidden;
+  padding: 10px 0;
+  rotate: -2.2deg;
+  &__inner {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+  }
+
+  &__text {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

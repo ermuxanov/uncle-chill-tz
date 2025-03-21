@@ -2,6 +2,9 @@ import Swiper from "swiper";
 import { plugins } from "./components/plugins.js";
 import { intro } from "./sections/intro.js";
 import { header } from "./components/header.js";
+import { marque } from "./components/marque.js";
+import { master } from "./sections/master.js";
+import { product } from "./sections/product.js";
 
 window.addEventListener("onbeforeunload", function () {
   window.scrollTo(0, 0);
@@ -14,7 +17,10 @@ window.addEventListener("unload", function () {
 
 window.addEventListener("load", () => {
   plugins();
+  marque();
   Swiper.use([Navigation, Autoplay]);
   header();
   intro();
+  master();
+  product();
 });
