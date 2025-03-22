@@ -5,6 +5,7 @@ import { header } from "./components/header.js";
 import { marque } from "./components/marque.js";
 import { master } from "./sections/master.js";
 import { product } from "./sections/product.js";
+import { friends } from "./sections/friends.js";
 
 window.addEventListener("onbeforeunload", function () {
   window.scrollTo(0, 0);
@@ -22,5 +23,6 @@ window.addEventListener("load", () => {
   header();
   intro();
   master();
-  product();
+  // product();
+  friends();
 });
