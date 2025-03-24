@@ -6,63 +6,73 @@
   &__title {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 38px;
+    font-size: 3.8rem;
     line-height: 121%;
     color: var(--white);
     text-align: center;
   }
   &__inner {
-    max-width: 1560px;
+    max-width: 156rem;
     width: 100%;
     height: fit-content;
     position: relative;
   }
   &__block {
-    max-width: 1400px;
+    max-width: 140rem;
     width: 100%;
     margin: 0 auto;
   }
   &__swiper {
-    margin-top: 100px;
+    margin-top: 10rem;
     position: relative;
     &-slide {
       cursor: pointer;
       &-img {
         position: relative;
+        width: 43rem;
+        img{
+          width: 100%;
+          height: 100%;
+        }
         svg {
           position: absolute;
           top: 0;
           left: 0;
+          width: 100%;
+          height: 100%; 
+          path{
+            transition: all 1s ease;
+          }
         }
       }
       &-info {
         background: var(--white);
-        border-radius: 10px;
-        min-height: 300px;
+        border-radius: 1rem;
+        min-height: 30rem;
         height: 100%;
-        padding: 50px;
+        padding: 5rem;
       }
       &-name {
         font-family: var(--second-family);
         font-weight: 400;
-        font-size: 24px;
+        font-size: 2.4rem;
         line-height: 125%;
         color: var(--black);
         white-space: nowrap;
       }
       &-exp {
         font-weight: 700;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 162%;
         color: var(--black);
-        margin-top: 25px;
+        margin-top: 2.5rem;
       }
       &-text {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 162%;
         color: var(--black);
-        margin-top: 10px;
+        margin-top: 1rem;
       }
     }
     &-button {
@@ -72,13 +82,13 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      bottom: 100px;
+      bottom: 10rem;
       left: 50%;
       transform: translate(-50%, -50%);
       &-prev,
       &-next {
-        width: 42px;
-        height: 42px;
+        width: 4.2rem;
+        height: 4.2rem;
         background: var(--white);
         border-radius: 50%;
         display: flex;
@@ -87,6 +97,10 @@
         pointer-events: all;
         cursor: pointer;
         transition: background 0.3s ease;
+        img{
+          width: 2rem;
+          height: 2rem;
+        }
         &:hover {
           background: var(--yellow);
         }

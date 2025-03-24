@@ -12,7 +12,7 @@
     "author": "kasym",
     "license": "ISC",
     "dependencies": {
-        "gsap": "3.11.5",
+        "gsap": "^3.11.5",
         "@fancyapps/ui": "^5.0.17",
         "@studio-freight/lenis": "^1.0.11",
         "body-scroll-lock": "^4.0.0-beta.0",

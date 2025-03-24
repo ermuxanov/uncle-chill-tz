@@ -1,0 +1,33 @@
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 7.5rem;
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:hover {
+      .decor {
+        stroke-dashoffset: 0;
+        // stroke-dasharray: 0;
+      }
+    }
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    .decor {
+      width: 8.7rem;
+      height: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      stroke-dashoffset: 415;
+      stroke-dasharray: 415;
+      transition: all 1s ease;
+    }
+  }
+}

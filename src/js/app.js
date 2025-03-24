@@ -6,15 +6,9 @@ import { marque } from "./components/marque.js";
 import { master } from "./sections/master.js";
 import { product } from "./sections/product.js";
 import { friends } from "./sections/friends.js";
-
-window.addEventListener("onbeforeunload", function () {
-  window.scrollTo(0, 0);
-  gsap.to(window, { duration: 0, scrollTo: 0 });
-});
-window.addEventListener("unload", function () {
-  window.scrollTo(0, 0);
-  gsap.to(window, { duration: 0, scrollTo: 0 });
-});
+import { features } from "./sections/features.js";
+import { price } from "./sections/price.js";
+import { about } from "./sections/about.js";
 
 window.addEventListener("load", () => {
   plugins();
@@ -22,7 +16,10 @@ window.addEventListener("load", () => {
   Swiper.use([Navigation, Autoplay]);
   header();
   intro();
+  features();
+  price();
+  about();
   master();
-  // product();
+  product();
   friends();
 });

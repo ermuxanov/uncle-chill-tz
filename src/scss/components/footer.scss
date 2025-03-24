@@ -1,0 +1,140 @@
+.footer {
+  &__inner {
+    padding: 10rem 0 13rem 5rem;
+    position: relative;
+    display: flex;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    svg {
+      width: 19rem;
+      height: 3.5rem;
+      cursor: pointer;
+    }
+    span {
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--white);
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 17rem;
+    &-heading {
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: var(--white);
+    }
+    .contacts {
+      margin-top: 2rem;
+    }
+    &-alex {
+      margin-top: auto;
+      width: 5rem;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 11rem;
+    &-item {
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: var(--white);
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-left: 11rem;
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      p {
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: var(--white);
+      }
+      span,
+      a {
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: var(--yellow);
+        max-width: 28.5rem;
+        width: 100%;
+      }
+    }
+  }
+  &__phone {
+    position: relative;
+    width: 23rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      // &:hover {
+      //   scale: 1.1;
+      .footer__phone-svg {
+        animation-play-state: paused;
+      }
+      .footer__phone-icon {
+        scale: 0.9;
+      }
+      // }
+    }
+    &-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 23.2rem;
+      animation: rotate 20s linear infinite;
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      background: var(--yellow);
+      z-index: 2;
+      position: relative;
+      transition: scale 0.3s ease;
+      img {
+        width: 3.6rem;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40rem;
+    img {
+      width: 100%;
+    }
+  }
+}

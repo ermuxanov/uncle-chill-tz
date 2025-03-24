@@ -3,27 +3,38 @@
   top: 0;
   z-index: 9;
   width: 100%;
-  --width: 116px;
+  --width: 11.6rem;
   &__inner {
     height: var(--width);
-    padding: 30px 30px 0;
+    padding: 3rem 3rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 2;
   }
   &__logo {
     cursor: pointer;
+    width: 19rem;
+    height: 3.5rem;
+    will-change: transform;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
   &__phone {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: var(--yellow);
+    opacity: 0;
   }
   &__mid {
     display: flex;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
+    // position: relative;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+    opacity: 0;
   }
   &__menu {
     width: var(--width);
@@ -32,50 +43,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 50px;
-    &-text {
+    margin: 0 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    &:hover {
+      .header__menu-svg {
+        animation-play-state: paused;
+      }
+      .header__menu-burger {
+        scale: 0.9;
+      }
+    }
+    &-svg {
       position: absolute;
-      width: 100%;
-      height: 100%;
       top: 0;
       left: 0;
-      animation: rotateText 20s linear infinite;
-      border-radius: 50%;
-      overflow: hidden;
-      cursor: pointer;
-      z-index: 1;
-      &:hover {
-        animation-play-state: paused;
-        & ~ .header__menu-burger {
-          scale: 0.9;
-        }
-      }
-      p {
-        font-weight: 500;
-        font-size: 12px;
-        color: var(--yellow);
-      }
-      span {
-        position: absolute;
-        left: 50%;
-        transform-origin: 0 calc(var(--width) / 2);
-      }
-      @keyframes rotateText {
-        0% {
-          transform: rotate(0deg);
-        }
+      width: 11.5rem;
+      animation: rotate 20s linear infinite;
+      @keyframes rotate {
         100% {
           transform: rotate(360deg);
         }
       }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
     &-burger {
-      width: 50px;
-      height: 50px;
+      width: 5rem;
+      height: 5rem;
       background: var(--white);
       border-radius: 50%;
       position: relative;
-      cursor: pointer;
       transition: scale 0.3s ease;
       span {
         &:first-child {
@@ -90,7 +91,7 @@
             content: "";
             position: absolute;
             width: 100%;
-            height: 1px;
+            height: 0.1rem;
             background: var(--black);
           }
           &::after {
@@ -106,7 +107,7 @@
   &__contacts {
     display: flex;
     align-items: center;
-    gap: 75px;
+    gap: 7.5rem;
     &-item {
       display: flex;
       align-items: center;
@@ -115,70 +116,158 @@
   }
   &__lang {
     display: flex;
-    gap: 60px;
+    gap: 6rem;
     align-items: center;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: var(--white);
-  }
-}
-@media (max-width: 1200px) {
-  .header {
-    &__inner {
-      padding: 25px;
-      background-color: #0f0f0f;
-    }
-    &__logo {
-      width: 120px;
-      svg {
-        width: 100%;
+    a {
+      position: relative;
+      &:hover {
+        .decor {
+          stroke-dashoffset: 0;
+          // stroke-dasharray: 0;
+        }
       }
     }
-    &__phone {
-      font-size: 14px;
-    }
-    &__contacts,
-    &__lang {
-      gap: 20px;
-    }
-    &__mid {
-      bottom: 0;
-      padding: 25px;
-      width: 100%;
-      background-color: #0f0f0f;
-      justify-content: center;
+    .decor {
+      width: 6rem;
+      height: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      stroke-dashoffset: 338;
+      stroke-dasharray: 338;
+      transition: all 1s ease;
     }
   }
-}
-@media (max-width: 768px) {
-  .header {
-    &__mid {
-      justify-content: space-between;
+
+  // transitions start
+  &__logo,
+  .contacts svg:not(.decor),
+  &__menu,
+  &__lang svg:not(.decor) {
+    path {
+      transition: all 0.3s ease;
     }
-    &__menu {
-      --width: 75px;
-      margin: 0;
-      &-burger {
-        width: 30px;
-        height: 30px;
+  }
+  .contacts,
+  &__lang {
+    .decor {
+      path {
+        transition: all 0.3s ease;
       }
-      &-text {
-        p {
-          font-size: 8px;
+    }
+  }
+  &__lang,
+  &__phone {
+    transition: all 0.3s ease;
+  }
+  &__menu-burger {
+    transition: all 0.3s ease;
+  }
+  // transitions end
+
+  &.menu-show {
+    .header__logo,
+    .contacts svg:not(.decor),
+    .header__menu,
+    .header__lang svg:not(.decor) {
+      path {
+        fill: var(--black);
+      }
+    }
+    .contacts,
+    .header__lang {
+      .decor {
+        path {
+          stroke: var(--black);
+        }
+      }
+    }
+    .header__lang,
+    .header__phone {
+      color: var(--black);
+    }
+
+    .header__menu-burger {
+      background: var(--yellow);
+    }
+
+    .menu {
+      display: flex;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      &__list-item {
+        span {
+          transform: translate(0, 0%);
+          transition: transform 0.3s ease 0.5s;
+        }
+        &:hover {
+          .marque {
+            opacity: 1;
+          }
         }
       }
     }
   }
-}
-@media (max-width: 576px) {
-  .header {
-    &__contacts,
-    &__lang {
-      gap: 10px;
-      font-size: 12px;
+  .menu {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    padding-top: 20rem;
+    display: flex;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: clip-path 0.5s ease;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 4.2rem;
+      font-weight: 600;
+      width: 100%;
       &-item {
-        width: 16px;
-        height: 16px;
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        span {
+          text-align: center;
+          padding: 1rem 0;
+          transform: translate(0, 100%);
+          transition: transform 0.3s ease;
+        }
+        .marque {
+          rotate: 0deg;
+          top: 0;
+          height: 100%;
+          background: var(--yellow);
+          opacity: 0;
+          // transition: opacity 0.3s ease;
+          &__text {
+            font-size: 4.2rem;
+          }
+        }
+      }
+    }
+    &__bottom {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 3rem;
+      span {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--black);
       }
     }
   }

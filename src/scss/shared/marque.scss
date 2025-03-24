@@ -3,7 +3,7 @@
   background: var(--white);
   z-index: 1;
   width: 100%;
-  bottom: 35px;
+  bottom: 3.5rem;
   overflow: hidden;
   rotate: -2.2deg;
   &__inner {
@@ -15,9 +15,9 @@
   &__text {
     white-space: nowrap;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: #000;
-    padding: 10px 0;
+    padding: 1rem 0;
   }
 }
 

@@ -7,44 +7,56 @@
     top: 0;
     height: 100vh;
     overflow: hidden;
+    // clip-path: polygon(100% 92%, 0% 100%, 100% 100%);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.2rem;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      clip-path: polygon(100% 92%, 0% 100%, 100% 100%);
+      z-index: 111;
+    }
   }
   &__inner {
     max-width: max-content;
     margin-left: 40%;
-    padding-top: 40px;
+    padding-top: 4rem;
   }
   &__title {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 38px;
+    font-size: 3.8rem;
     line-height: 121%;
     color: var(--white);
   }
   .text {
-    margin-top: 20px;
-    width: 530px;
+    margin-top: 2rem;
+    width: 53rem;
   }
   &__wrapper {
     position: relative;
-    margin-top: 50px;
+    margin-top: 5rem;
   }
   &__wrap {
-    border-radius: 10px;
-    padding: 80px 100px 70px 90px;
+    border-radius: 1rem;
+    padding: 8rem 10rem 7rem 9rem;
     background: var(--white);
     &-title {
       font-family: var(--second-family);
       font-weight: 400;
-      font-size: 24px;
+      font-size: 2.4rem;
       line-height: 125%;
       color: var(--black);
     }
     &-flex {
       display: flex;
       flex-direction: column;
-      gap: 25px;
-      margin-top: 30px;
-      width: 660px;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      width: 66rem;
     }
     &-item {
       display: flex;
@@ -52,14 +64,14 @@
       width: 100%;
       p {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 162%;
         color: var(--black);
       }
       span {
         font-family: var(--second-family);
         font-weight: 400;
-        font-size: 20px;
+        font-size: 2rem;
         line-height: 110%;
         color: var(--black);
       }
@@ -75,9 +87,21 @@
     position: absolute;
     bottom: 0;
     left: -12%;
-    rotate: 10deg;
     transform-origin: left bottom;
-    animation: rotateImg 1s linear alternate-reverse infinite;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &.front {
+      width: 56.5rem;
+      rotate: 10deg;
+      animation: rotateImg 1s linear alternate-reverse infinite;
+    }
+    &.back {
+      width: 86.2rem;
+      rotate: -2deg;
+      animation: rotateImg2 .5s linear alternate-reverse infinite;
+    }
     @keyframes rotateImg {
       0% {
         transform: rotate(5deg);
@@ -89,8 +113,10 @@
         transform: rotate(-5deg);
       }
     }
+    @keyframes rotateImg2 {
+      100% {
+        transform: rotate(-3deg);
+      }
+    }
   }
-
-  
-  
 }

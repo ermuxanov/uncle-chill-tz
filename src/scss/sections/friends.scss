@@ -5,7 +5,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: .2rem;
     left: 0;
     width: 100%;
     height: 100%;
@@ -22,12 +22,12 @@
   &__title {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 38px;
+    font-size: 3.8rem;
     line-height: 121%;
     color: var(--white);
   }
   &__swiper {
-    margin-top: 150px;
+    margin-top: 15rem;
     overflow: visible;
     width: 100%;
     &-wrapper {
@@ -35,14 +35,14 @@
     }
     &-slide {
       display: flex;
-      max-width: 780px;
+      max-width: 78rem;
       width: 100%;
-      height: 390px;
+      height: 39rem;
       cursor: pointer;
       &.odd {
         .friends__swiper-right {
           background: #2d2d2d;
-          margin-top: 10px;
+          margin-top: 1rem;
           p,
           a {
             color: var(--white);
@@ -57,7 +57,7 @@
       &.even {
         .friends__swiper-right {
           background: #e6fb04;
-          margin-top: -10px;
+          margin-top: -1rem;
           p,
           a {
             color: var(--black);
@@ -73,22 +73,23 @@
     &-left,
     &-right {
       width: 50%;
-      border-radius: 10px;
+      height: fit-content;
+      border-radius: 1rem;
       overflow: hidden;
-      height: 100%;
     }
     &-right {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 50px;
-      padding: 0 60px;
-      margin-left: -10px;
+      gap: 5rem;
+      padding: 0 6rem;
+      margin-left: -1rem;
       animation: friends 5s linear infinite;
+      aspect-ratio: 1;
       p,
       a {
-        font-size: 18px;
+        font-size: 1.8rem;
         line-height: 167%;
         text-align: center;
         opacity: 0.6;
@@ -102,11 +103,15 @@
         text-decoration-skip-ink: none;
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 1.5rem;
       }
     }
     &-left {
       animation: friends-reverse 5s linear infinite;
+      img{
+        width: 100%;
+        aspect-ratio: 1;
+      }
     }
     @keyframes friends {
       0% {

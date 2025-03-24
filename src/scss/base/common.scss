@@ -1,13 +1,12 @@
-// @use "sass:math";
+@use "sass:math";
 
-// @function rem($screen) {
-//   @return math.div(100vw, $screen) * 10;
-// }
-// html,
-// body {
-//   font-size: rem(1920);
-//   overflow: hidden visible;
-// }
+@function rem($screen) {
+  @return math.div(100vw, $screen) * 10;
+}
+html,
+body {
+  font-size: rem(1920);
+}
 ::-webkit-scrollbar {
   display: none;
 }

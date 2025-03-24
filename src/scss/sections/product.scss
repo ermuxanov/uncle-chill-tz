@@ -13,29 +13,33 @@
   &__title {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 38px;
+    font-size: 3.8rem;
     line-height: 121%;
     color: var(--white);
   }
   &__text {
-    max-width: 460px;
+    max-width: 46rem;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 5rem;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 150%;
     text-align: center;
     color: var(--white);
   }
   .button {
-    margin-top: 70px;
+    margin-top: 7rem;
   }
   &__img {
-    margin-top: 50px;
+    margin-top: 5rem;
+    width: 28.6rem;
+    img {
+      width: 100%;
+    }
   }
   &__swiper {
     position: absolute;
-    bottom: 100px;
+    bottom: 10rem;
     z-index: 2;
     width: 100%;
     overflow: visible;
@@ -43,20 +47,24 @@
       transition-timing-function: linear;
     }
     &-slide {
-      width: 200px;
-      height: 300px;
+      width: 20rem;
+      height: 30rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 10px;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 1rem;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.08);
       background: var(--white);
       cursor: pointer;
       transition: scale 0.3s ease;
-      &:nth-child(odd) {
+      img {
+        width: 10rem;
+        object-fit: contain;
+      }
+      &.odd {
         animation: product-reverse 5s linear infinite;
       }
-      &:nth-child(even) {
+      &.even {
         animation: product 5s linear infinite;
       }
       @keyframes product {
@@ -89,6 +97,6 @@
   }
   .marque {
     rotate: 1.2deg;
-    bottom: 6px;
+    bottom: 0.6rem;
   }
 }

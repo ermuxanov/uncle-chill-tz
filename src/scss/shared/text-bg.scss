@@ -1,12 +1,13 @@
 .text {
   position: relative;
-  margin-top: 20px;
-  border-radius: 5px;
+  margin-top: 2rem;
+  border-radius: .5rem;
+  overflow: hidden;
   p {
     width: max-content;
-    padding: 27px 30px;
+    padding: 2.7rem 3rem;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 108%;
     color: var(--yellow);
     z-index: 2;

@@ -1,0 +1,115 @@
+.action {
+  padding-top: 16rem;
+  padding-bottom: 5.5rem;
+  background: #fff;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 3.8rem;
+    line-height: 121%;
+    text-align: center;
+    color: var(--black);
+  }
+  &__block {
+    margin-top: 7rem;
+    display: flex;
+    gap: 22rem;
+    align-items: center;
+  }
+  &__left {
+    position: relative;
+    &-img {
+      position: relative;
+      // z-index: 3;
+      width: 70rem;
+      &::before {
+        content: "";
+        position: absolute;
+        background: var(--yellow);
+        width: 45rem;
+        aspect-ratio: 1;
+        bottom: 0;
+        left: 6%;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      img {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+      }
+    }
+    &-svg {
+      position: absolute;
+      bottom: 0;
+      right: -13%;
+      z-index: 2;
+      width: 52.6rem;
+      animation: rotate 20s linear infinite;
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__right {
+    padding: 5rem;
+    border-radius: 1rem;
+    min-height: 33rem;
+    position: relative;
+    overflow: hidden;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 47rem;
+      height: 33rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-heading {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 125%;
+      color: var(--black);
+      position: relative;
+      z-index: 1;
+    }
+    .text {
+      margin-top: 4rem;
+    }
+    &-text {
+      margin-top: 3rem;
+      max-width: 29.5rem;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 130%;
+      color: var(--black);
+    }
+  }
+  .text {
+    width: 25rem;
+  }
+  .marque {
+    outline: 0.1rem solid var(--black);
+    z-index: 5;
+  }
+}
