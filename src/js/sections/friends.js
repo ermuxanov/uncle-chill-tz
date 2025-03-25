@@ -15,4 +15,17 @@ export function friends() {
       disableOnInteraction: false,
     },
   });
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".friends",
+      start: "top bottom",
+      end: "center center",
+      scrub: true,
+    },
+  });
+  tl.from(".friends__title", {
+    yPercent: 100,
+    opacity: 0,
+  });
 }

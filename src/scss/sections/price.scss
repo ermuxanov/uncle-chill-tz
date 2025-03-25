@@ -120,3 +120,35 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .price{
+    &__title{
+      font-size: 1.4rem;
+    }
+    .text{
+      width: 100%;
+      p{
+        font-size: 1.2rem;
+      }
+    }
+    &__img{
+      display: none;
+    }
+    &__inner{
+      margin-left: 0;
+      padding: 0 3rem;
+    }
+    &__wrap{
+      padding: 2rem;
+      width: 100%;
+      &-item{
+        flex-direction: column;
+      }
+      &-flex{
+        width: 100%;
+      }
+    }
+  }
+}

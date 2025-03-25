@@ -140,3 +140,28 @@
     background: var(--yellow);
   }
 }
+
+
+@media (max-width: 768px) {
+  .friends{
+    &__title{
+      font-size: 1.6rem;
+    }
+    &__swiper{
+      &-right{
+        gap: 0;
+        padding: 0 1rem;
+        p{
+          font-size: 1.2rem;
+        }
+        a{
+          gap: 0.5rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &::after{
+      clip-path: polygon(100% 98%, 0 100%, 100% 100%);
+    }
+  }
+}

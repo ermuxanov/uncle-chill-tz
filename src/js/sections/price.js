@@ -9,7 +9,6 @@ export function price() {
       start: "top center",
       end: "+=1 top",
       scrub: 1,
-      // markers: true,
     },
   });
   gsap.to(".price", {

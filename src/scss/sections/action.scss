@@ -25,24 +25,21 @@
   }
   &__left {
     position: relative;
+    &-circle {
+      position: absolute;
+      background: var(--yellow);
+      width: 45rem;
+      aspect-ratio: 1;
+      bottom: 0;
+      left: 6%;
+      border-radius: 50%;
+    }
     &-img {
       position: relative;
-      // z-index: 3;
+      z-index: 3;
       width: 70rem;
-      &::before {
-        content: "";
-        position: absolute;
-        background: var(--yellow);
-        width: 45rem;
-        aspect-ratio: 1;
-        bottom: 0;
-        left: 6%;
-        border-radius: 50%;
-        z-index: 1;
-      }
       img {
         position: relative;
-        z-index: 3;
         width: 100%;
       }
     }
@@ -111,5 +108,33 @@
   .marque {
     outline: 0.1rem solid var(--black);
     z-index: 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .action {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    &__inner{
+      padding: 0 3rem;
+    }
+    &__block {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    &__left {
+      &-img {
+        width: auto;
+      }
+      &-svg {
+        width: 100%;
+        right: auto;
+        left: 0;
+      }
+      &-circle{
+        width: 25rem;
+        height: 25rem;
+      }
+    }
   }
 }

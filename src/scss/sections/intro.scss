@@ -98,7 +98,7 @@
     &-img {
       position: relative;
       z-index: 2;
-      transform: translate(-100px, 9rem);
+      transform: translate(-10rem, 9rem);
       width: 100%;
       height: 100%;
     }
@@ -119,6 +119,73 @@
       transform: translate(-17rem, 13rem);
       width: 16.7rem;
       height: 13rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding-top: 12rem;
+    &__inner {
+      padding-top: 4rem;
+    }
+    &__block {
+      max-width: 100%;
+      height: auto;
+      padding: 0 3rem;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__left {
+      max-width: 100%;
+      .text {
+        width: 100%;
+        p {
+          font-size: 1.4rem;
+        }
+      }
+      &-heading {
+        font-size: 3rem;
+        margin-top: 10rem;
+      }
+      &-btn {
+        margin-top: 10rem;
+        padding: 3rem 4.5rem 3rem 5rem;
+        border-radius: 0.5rem;
+        button {
+          font-size: 2rem;
+        }
+      }
+      &-britva {
+        transform: rotate(75deg) translate(0, 0);
+        width: 20rem;
+        height: auto;
+        display: none;
+      }
+    }
+    &__right {
+      width: 27rem;
+      height: auto;
+      order: -1;
+      &-sticker {
+        width: 10rem;
+        height: 10rem;
+      }
+      &-img {
+        transform: translate(0, 0);
+      }
+      &-bg {
+        transform: translate(0, 0);
+        width: 28rem;
+        height: auto;
+        left: auto;
+      }
+      &-lenta {
+        transform: translate(-17rem, 13rem);
+        width: 16.7rem;
+        height: 13rem;
+        display: none;
+      }
     }
   }
 }

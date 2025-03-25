@@ -138,3 +138,40 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .footer {
+    &__inner {
+      padding: 3rem 3rem 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
+    &__img {
+      display: none;
+    }
+    &__logo{
+      gap: 2rem;
+      align-items: center;
+    }
+    &__contacts{
+      margin-left: 0;
+      gap: 2rem;
+      align-items: center;
+    }
+    &__nav{
+      margin-left: 0;
+      align-items: center;
+    }
+    &__info{
+      margin-left: 0;
+      align-items: center;
+      &-wrap{
+        align-items: center;
+        text-align: center;
+      }
+    }
+    &__phone{
+      margin: 0 auto;
+    }
+  }
+}

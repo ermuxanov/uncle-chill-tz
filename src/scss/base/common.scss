@@ -6,6 +6,15 @@
 html,
 body {
   font-size: rem(1920);
+  @media (max-width: 768px) {
+    font-size: rem(360);
+  }
+}
+body {
+  overflow: hidden visible;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 ::-webkit-scrollbar {
   display: none;

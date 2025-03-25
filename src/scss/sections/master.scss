@@ -30,7 +30,7 @@
       &-img {
         position: relative;
         width: 43rem;
-        img{
+        img {
           width: 100%;
           height: 100%;
         }
@@ -39,8 +39,8 @@
           top: 0;
           left: 0;
           width: 100%;
-          height: 100%; 
-          path{
+          height: 100%;
+          path {
             transition: all 1s ease;
           }
         }
@@ -51,6 +51,8 @@
         min-height: 30rem;
         height: 100%;
         padding: 5rem;
+        z-index: 2;
+        position: relative;
       }
       &-name {
         font-family: var(--second-family);
@@ -97,12 +99,33 @@
         pointer-events: all;
         cursor: pointer;
         transition: background 0.3s ease;
-        img{
+        img {
           width: 2rem;
           height: 2rem;
         }
         &:hover {
           background: var(--yellow);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .master {
+    &__inner {
+      padding: 0 3rem;
+    }
+    &__swiper {
+      &-slide {
+        &-img {
+          width: 100%;
+        }
+        &-info{
+          padding: 2rem;
+        }
+        &-name{
+          font-size: 1.4rem;
         }
       }
     }

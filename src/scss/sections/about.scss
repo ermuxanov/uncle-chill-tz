@@ -38,14 +38,17 @@
     &-img {
       &:first-child {
         img {
+          transform-origin: left bottom;
           vertical-align: baseline;
           &:first-child {
             margin-left: -6%;
             width: 46rem;
+            rotate: -80deg;
           }
           &:last-child {
             margin-left: -24%;
             width: 46.5rem;
+            rotate: -80deg;
           }
         }
       }
@@ -53,14 +56,17 @@
         img {
           vertical-align: baseline;
           position: relative;
+          transform-origin: right bottom;
           &:first-child {
             margin-right: -13%;
             z-index: 2;
             width: 40rem;
+            rotate: 80deg;
           }
           &:last-of-type {
             margin-right: -13rem;
             width: 40rem;
+            rotate: 80deg;
           }
         }
       }
@@ -71,5 +77,18 @@
     transform-origin: bottom right;
     margin-top: 0;
     bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about{
+    &__inner{
+      padding: 0 3rem;
+    }
+    &__bottom{
+      &-img{
+        display: none;
+      }
+    }
   }
 }
